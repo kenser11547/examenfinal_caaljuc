@@ -16,5 +16,16 @@ abstract class Conexion{
             echo $e->getMessage();
             exit;
         }
+
+        return self::$conexion;
+    }
+
+    public static function ejecutar($sql){
+        /*conectarse a la BD, preparacion de la sentencia, ejecucion y devolucion de resultados */
+        self::conectar();
+        $sentencia = self::$conexion->prepare($sql);
+        $resultado = $sentencia->execute();
+        self::$conexion = null;
+        return $resultado;
     }
 }

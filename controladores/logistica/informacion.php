@@ -32,7 +32,7 @@ try {
         /*aqui se diseña el cuerpo de la pagina*/
 
         body {
-            background-image: url(./ejercito.jpg);
+            background-image: url(./insumos.jpg);
             background-size:cover;
             background-attachment: fixed;
 

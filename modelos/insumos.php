@@ -4,9 +4,8 @@ require 'Conexion.php';
 class Producto extends Conexion{
     public $id_insumo;
     public $nombre;
-    public $marca_producto;
     public $cantidad_existencia;
-    public $marca;
+    public $marca_producto;
     public $nombre_proveedor;
     public $precio;
  
@@ -14,12 +13,15 @@ class Producto extends Conexion{
     {
         $this->id_insumo = $args['id_insumo'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
-        $this->marca_producto = $args['marca_producto'] ?? '';
         $this->cantidad_existencia = $args['cantidad_existencia'] ?? '';
-        $this->marca = $args['marca'] ?? '';
+        $this->marca_producto = $args['marca_producto'] ?? '';
         $this->nombre_proveedor = $args['nombre_proveedor'] ?? '';
         $this->precio = $args['precio'] ?? '';
 
-            }
-
+    }
+    public function guardar(){
+        $sql = "INSERT INTO insumos(nombre,cantidad_existencia, marca_producto, nombre_proveedor, precio) values('$this->nombre','$this->cantidad_existencia','$this->marca_producto','$this->nombre_proveedor','$this->precio')";
+        $resultado = self::ejecutar($sql);
+        return $resultado;
+    }
 }

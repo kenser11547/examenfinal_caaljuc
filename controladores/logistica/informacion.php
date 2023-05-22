@@ -89,7 +89,7 @@ try {
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/examenfinal_caaljuc/vistas/einsumos/index.php" class="btn btn-info" id="alert">REGRESAR AL FORMULARIO</a>
+                <a href="/examenfinal_caaljuc/vistas/insumos/index.php" class="btn btn-info" id="alert">REGRESAR AL FORMULARIO</a>
             </div>
         </div>
     </div>
